@@ -46,7 +46,7 @@ export default function Home() {
             </li>
             <li>
               <b>Update next.config.js</b>
-              <P>add <code>baseUrl:"/&lt;Site Name&gt;"</code> and <code>output: "export"</code></P>
+              <P>add <code>baseUrl:&#34;/&lt;Site Name&gt;&#34;</code> and <code>output: &#34;export&#34;</code></P>
             </li>
             <li>
               <b>Push Changes</b>

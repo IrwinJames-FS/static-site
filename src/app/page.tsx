@@ -28,7 +28,7 @@ export default function Home() {
 
         <Section>
           <Title step={3} title="Create an upstream"/>
-          <P>To put it simply make an online repo. While your there head over to pages and set it to use git actions rather then a branch</P>
+          <P>To put it simply make an online repo. While your there head over to the settings page and enable pages and set it to use git actions rather then a branch</P>
         </Section>
 
         <Section>

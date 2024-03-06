@@ -15,7 +15,7 @@ export default function Home() {
         <P>Nextjs to me is the wonderful evolution of react. with the ability to define fully functional server and client interactions within a workspace makes buildint SSR application seamless and a very easily managed stack. However lots of its benefit is lost on a static site. Anyways heres how I did it.</P>
         <Section>
           <Title step={1} title="Build the static site structure"/>
-          <P>Nextjs has a really cool navigation convention that allows you to declare api and ui "leafs" side by side. Also routes can be nested like a normal file server so coming from something like express it feels like half the job of routing is done for you.</P>
+          <P>Nextjs has a really cool navigation convention that allows you to declare api and ui &#34;leafs&#34; side by side. Also routes can be nested like a normal file server so coming from something like express it feels like half the job of routing is done for you.</P>
           <Link href="https://nextjs.org/docs/app/building-your-application/routing">Nextjs Routing Documentation</Link>
         </Section>
         
@@ -23,7 +23,7 @@ export default function Home() {
           <Title step={2} title="Create a layout"/>
           <P>Initially I wanted to build in mui. while adding in a their app cache doesnt seem like to much I figured remove complications.</P>
           <P>Ultimately Nextjs supports tailwind out of the box so prototyping is easy. But for more complex or polished project you might want to check out MUI or rather @emotion. It provides some great optimizations for server side rendering if someone like the styled-components behavior.</P>
-          <Link href="https://mui.com/material-ui/integrations/nextjs/">MUI's Nextjs integration guid</Link>
+          <Link href="https://mui.com/material-ui/integrations/nextjs/">MUI&#39;s Nextjs integration guid</Link>
         </Section>
 
         <Section>

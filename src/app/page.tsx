@@ -1,4 +1,4 @@
-import { Link, P, Section, Title } from "@/components";
+import { Code, Link, P, Section, Title } from "@/components";
 
 
 export default function Home() {
@@ -21,8 +21,17 @@ export default function Home() {
         
         <Section>
           <Title step={2} title="Create a layout"/>
-          <P>Initially I wanted to build in mui. while adding in a their app cache doesnt seem like to much I figured remove complications.</P>
-          <P>Ultimately Nextjs supports tailwind out of the box so prototyping is easy. But for more complex or polished project you might want to check out MUI or rather @emotion. It provides some great optimizations for server side rendering if someone like the styled-components behavior.</P>
+          <P>Initially I wanted to build this using mui, however I decided to keep things simple.</P>
+          <P>Ultimately Nextjs supports tailwind out of the box so prototyping is easy. But for more complex or polished project you might want to check out MUI or rather @emotion. It provides some great optimizations for server side rendering if someone likes styled-components.</P>
+          <P>To build this page I created a the following components:</P>
+          <ul className="list-disc pl-8">
+            <li>Code</li>
+            <li>Link</li>
+            <li>P</li>
+            <li>Section</li>
+            <li>Title</li>
+          </ul>
+          <P>Currently the header and footer is set on the page however if the same header and footer is used site wide it can easily be moved to the layout file. Because the topbar and footer are only used once and contains no state I did not see the need to make a reusable component for them. </P>
           <Link href="https://mui.com/material-ui/integrations/nextjs/">MUI&#39;s Nextjs integration guid</Link>
         </Section>
 
@@ -38,15 +47,43 @@ export default function Home() {
           <ul className="list-decimal pl-4">
             <li>
               <b>Remove the setup pages step from nextjs.yml</b>
+              <Code>
+{`- name: Setup Pages
+    uses: actions/configure-pages@v4
+    with:
+      # Automatically inject basePath in your Next.js configuration file and disable
+      # server side image optimization (https://nextjs.org/docs/api-reference/next/image#unoptimized).
+      #
+      # You may remove this line if you want to manage the configuration yourself.
+      static_site_generator: next`}
+              </Code>
               <P>This step creates an invalid next.config.js that contains invalid keys</P>
             </li>
             <li>
               <b>Remove the Static HTML export step</b>
+              <Code>
+{`- name: Static HTML export with Next.js
+    run: \$\{\{ steps.detect-package-manager.outputs.runner \}\} next export`}
+              </Code>
               <P>This step uses a legacy cli command that is no longer supported</P>
             </li>
             <li>
               <b>Update next.config.js</b>
-              <P>add <code>baseUrl:&#34;/&lt;Site Name&gt;&#34;</code> and <code>output: &#34;export&#34;</code></P>
+              <Code>
+{`module.exports = {
+  baseUrl: "/<Site Name>",
+  output: "export"
+}`}
+              </Code>
+              <ul className="list-disc pl-4">
+                <li>
+                  <P>changing the baseUrl instructs the next application where its located on the server. (Warning local development will change to {`http://localhost:3000/<Repo Name>`}</P>
+                </li>
+                <li>
+                  <P>adding the export flag will build the nextjs application and export the static pages</P>
+                </li>
+              </ul>
+              
             </li>
             <li>
               <b>Push Changes</b>

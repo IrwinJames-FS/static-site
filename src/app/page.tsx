@@ -11,11 +11,15 @@ export default function Home() {
     </header>
     <main className="flex-grow pt-16">
       <article className="m-4 p-4 shadow">
-        <h3 className="text-lg">Nextjs</h3>
-        <P>Nextjs to me is the wonderful evolution of react. with the ability to define fully functional server and client interactions within a workspace makes buildint SSR application seamless and a very easily managed stack. However lots of its benefit is lost on a static site. Anyways heres how I did it.</P>
+        <Section>
+          <h3 className="text-xl font-bold">Nextjs</h3>
+          <P>Nextjs to me is the wonderful evolution of react. with the ability to define fully functional server and client interactions within a workspace is great! Anyways heres how I did it.</P>
+        </Section>
+        
+        
         <Section>
           <Title step={1} title="Build the static site structure"/>
-          <P>Nextjs has a really cool navigation convention that allows you to declare api and ui &#34;leafs&#34; side by side. Also routes can be nested like a normal file server so coming from something like express it feels like half the job of routing is done for you.</P>
+          <P>Nextjs has a really cool navigation convention that allows you to declare api and ui &#34;leafs&#34; side by side. Also routes can be nested like a normal file server so coming from something like express it feels like half the job of routing is done for you. (For this site this is unecessary because its a single page)</P>
           <Link href="https://nextjs.org/docs/app/building-your-application/routing">Nextjs Routing Documentation</Link>
         </Section>
         
@@ -67,29 +71,24 @@ export default function Home() {
               </Code>
               <P>This step uses a legacy cli command that is no longer supported</P>
             </li>
-            <li>
-              <b>Update next.config.js</b>
-              <Code>
+          </ul>
+        </Section>
+        <Section>
+          <Title step={5} title="Update next.config.js"/>
+          <Code>
 {`module.exports = {
   baseUrl: "/<Site Name>",
   output: "export"
 }`}
-              </Code>
-              <ul className="list-disc pl-4">
-                <li>
-                  <P>changing the baseUrl instructs the next application where its located on the server. (Warning local development will change to {`http://localhost:3000/<Repo Name>`}</P>
-                </li>
-                <li>
-                  <P>adding the export flag will build the nextjs application and export the static pages</P>
-                </li>
-              </ul>
-              
-            </li>
-            <li>
-              <b>Push Changes</b>
-              <P>Any changes to the main branch will start this action which compiles your next server then exports the static pages and files.</P>
-            </li>
+          </Code>
+          <ul className="list-disc pl-4">
+            <li>Changing the baseUrl instructs the next application where its located on the server. (Warning local development will change to {`http://localhost:3000/<Repo Name>`}</li>
+            <li>Adding the export flag will build the nextjs application and export the static pages</li>
           </ul>
+        </Section>
+        <Section>
+          <Title step={6} title="Push Changes"/>
+          <P>Now when the main branch is pushed to the nextjs action will run which will compile the site and upload it to the site pages.</P>
         </Section>
       </article>
     </main>

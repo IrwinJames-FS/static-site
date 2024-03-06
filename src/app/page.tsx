@@ -6,7 +6,7 @@ export default function Home() {
         Just another Static Site
       </a>
     </header>
-    <main className="flex-grow">
+    <main className="flex-grow pt-16">
       <article className="m-4 p-4 shadow">
         <h3 className="text-lg">Nextjs</h3>
         <p>Nextjs to me is the wonderful evolution of react. with the ability to define fully functional server and client interactions within a workspace makes buildint SSR application seamless and a very easily managed stack.</p>

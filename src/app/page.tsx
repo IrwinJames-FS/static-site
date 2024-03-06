@@ -10,7 +10,7 @@ export default function Home() {
       <article className="m-4 p-4 shadow">
         <h3 className="text-lg">Nextjs</h3>
         <p>Nextjs to me is the wonderful evolution of react. with the ability to define fully functional server and client interactions within a workspace makes buildint SSR application seamless and a very easily managed stack.</p>
-        <p>If I missed the point of this assignment I am sorry. I initially thought we were </p>
+        
       </article>
     </main>
     <footer className="h-10 bg-slate-200 flex flex-row items-center px-2">

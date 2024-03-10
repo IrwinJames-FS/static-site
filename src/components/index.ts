@@ -1,4 +1,5 @@
 export * from "./Article";
+export * from "./B";
 export * from "./Code";
 export * from "./Link";
 export * from "./P";

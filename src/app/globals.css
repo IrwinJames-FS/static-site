@@ -2,3 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+.expandable ul {
+	height: 0;
+	transition: 1s;
+	overflow: hidden;
+}
+
+.expandable label:has(input:checked) + ul {
+	height: 10rem;
+}

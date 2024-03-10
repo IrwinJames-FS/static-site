@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { Template } from "@/components/Template";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -14,9 +15,5 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return (
-    <html lang="en">
-      <body className={`${inter.className} h-dvh bg-slate-100 flex flex-col justify-start`}>{children}</body>
-    </html>
-  );
+  return (<Template>{children}</Template>)
 }

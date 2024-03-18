@@ -13,5 +13,10 @@ export const navLinks: {title: string, caption: string, href: string}[] = [
 		title: 'Flavors of React',
 		caption: 'We talk about react but do we really react?',
 		href: '/static-site/articles/react'
+	},
+	{
+		title:'Deploy an app to heroku',
+		caption: 'Its pretty straight forward',
+		href: '/static-site/articles/heroku'
 	}
 ];

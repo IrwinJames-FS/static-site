@@ -8,7 +8,7 @@ export default function Home() {
       <h1 className="text-xl font-bold">Just Another Static Site</h1>
       <p>I thought it would be fun to deploy this site on github pages.</p>
     </Section>
-    <nav className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4">
+    <nav className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 justify-center">
       {navLinks.map(({title, caption, href}, i) => (<Section key={`article-${i}`}>
       <Link className="cursor-pointer flex flex-col justify-center items-stretch" {...{href}}>
           <h2 className="text-lg font-bold">{title}</h2>

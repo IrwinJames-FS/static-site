@@ -18,5 +18,10 @@ export const navLinks: {title: string, caption: string, href: string}[] = [
 		title:'Deploy an app to heroku',
 		caption: 'Its pretty straight forward',
 		href: '/static-site/articles/heroku'
+	},
+	{
+		title: 'Ark Watch',
+		caption: "It's Live!!!!",
+		href: '/static-site/articles/arkwatch'
 	}
 ];

@@ -18,7 +18,7 @@ const Page = () => (<Article>
 	</Section>
 	<Section>
 		<Title h={4} step={3}>Logic</Title>
-		<P>Every 10 seconds arkwatch polls ark's servers and stores the population of each server in a special object. at the top of each hour this object is cleared out and the population is averaged and stored to the .watch file. When a user signs in the react application polls arkwatches servers every 10 seconds and receives the data from the last time Ark's servers were polled (In theory this should always be new info but cron jobs dont always fire every 10 seconds which results in occasional duplicate info). When a user clicks the graph icon by a server population they can see up to 3 months of population information for that server and population trends. This make scouting and monitoring servers very easy.</P>
+		<P>Every 10 seconds arkwatch polls ark&39;s servers and stores the population of each server in a special object. at the top of each hour this object is cleared out and the population is averaged and stored to the .watch file. When a user signs in the react application polls arkwatches servers every 10 seconds and receives the data from the last time Ark&39;s servers were polled (In theory this should always be new info but cron jobs dont always fire every 10 seconds which results in occasional duplicate info). When a user clicks the graph icon by a server population they can see up to 3 months of population information for that server and population trends. This make scouting and monitoring servers very easy.</P>
 	</Section>
 	<Section>
 		<Title h={4} step={4}>Bugs</Title>

@@ -28,5 +28,10 @@ export const navLinks: {title: string, caption: string, href: string}[] = [
 		title: 'React Native',
 		caption: "The best and worst of all worlds",
 		href: '/static-site/articles/native'
+	},
+	{
+		title: 'Security',
+		caption: 'Security is easy until its to late',
+		href: '/static-site/articles/security'
 	}
 ];
